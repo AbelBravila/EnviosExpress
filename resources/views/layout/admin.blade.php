@@ -31,7 +31,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('dashboard')}}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-shipping-fast"></i>
                 </div>
@@ -65,7 +65,7 @@
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="buttons.html">Empleados</a>
+                        <a class="collapse-item" href="{{route('usuarios')}}">Empleados</a>
                     </div>
                 </div>
             </li>
@@ -369,6 +369,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="{{asset('backend/assets/vendor/jquery/jquery.min.js')}}"></script>
