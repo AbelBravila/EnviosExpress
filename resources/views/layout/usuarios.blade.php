@@ -19,6 +19,12 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('backend/assets/css/sb-admin-2.min.css')}}" rel="stylesheet">
+<<<<<<< HEAD
+=======
+
+    <!-- Custom styles for this page -->
+    <link href="{{asset('backend/assets/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+>>>>>>> fa4a79d4bfc164e0fe1a10ad189a9fae09d0d271
 
     <!-- Custom styles for this page -->
     <link href="{{asset('backend/assets/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
@@ -358,11 +364,14 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
+<<<<<<< HEAD
                     <h1 class="h3 mb-2 text-gray-800">Tables</h1>
                     <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
                         For more information about DataTables, please visit the <a target="_blank"
                             href="https://datatables.net">official DataTables documentation</a>.</p>
 
+=======
+>>>>>>> fa4a79d4bfc164e0fe1a10ad189a9fae09d0d271
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -373,26 +382,45 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+<<<<<<< HEAD
                                             <th>Name</th>
                                             <th>Position</th>
                                             <th>Office</th>
                                             <th>Age</th>
                                             <th>Start date</th>
                                             <th>Salary</th>
+=======
+                                            <th>Id</th>
+                                            <th>Nombre</th>
+                                            <th>Correo</th>
+                                            <th>Telefono</th>
+                                            <th>Sucursal</th>
+                                            <th>Acciones</th>
+>>>>>>> fa4a79d4bfc164e0fe1a10ad189a9fae09d0d271
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
+<<<<<<< HEAD
                                             <th>Name</th>
                                             <th>Position</th>
                                             <th>Office</th>
                                             <th>Age</th>
                                             <th>Start date</th>
                                             <th>Salary</th>
+=======
+                                        <th>Id</th>
+                                        <th>Nombre</th>
+                                        <th>Correo</th>
+                                        <th>Telefono</th>
+                                        <th>Sucursal</th>
+                                        <th>Acciones</th>
+>>>>>>> fa4a79d4bfc164e0fe1a10ad189a9fae09d0d271
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
+<<<<<<< HEAD
                                             <td>Tiger Nixon</td>
                                             <td>System Architect</td>
                                             <td>Edinburgh</td>
@@ -848,13 +876,21 @@
                                             <td>2011/01/25</td>
                                             <td>$112,000</td>
                                         </tr>
+=======
+                                            
+                                        </tr>
+                                        
+>>>>>>> fa4a79d4bfc164e0fe1a10ad189a9fae09d0d271
                                     </tbody>
                                 </table>
                             </div>
                         </div>
                     </div>
 
+<<<<<<< HEAD
                 </div>
+=======
+>>>>>>> fa4a79d4bfc164e0fe1a10ad189a9fae09d0d271
                 <!-- /.container-fluid -->
 
             </div>
@@ -900,10 +936,17 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+=======
+    
+<!-- Bootstrap core JavaScript-->
+<script src="{{asset('backend/assets/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('backend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+>>>>>>> fa4a79d4bfc164e0fe1a10ad189a9fae09d0d271
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -912,11 +955,22 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
+<<<<<<< HEAD
     <script src="vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
+=======
+    <script src="{{asset('backend/assets/vendor/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('backend/assets/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{{asset('backend/assets/js/demo/datatables-demo.js')}}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+>>>>>>> fa4a79d4bfc164e0fe1a10ad189a9fae09d0d271
 
 </body>
 
