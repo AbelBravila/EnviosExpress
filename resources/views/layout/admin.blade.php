@@ -330,7 +330,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy;AFBS -2024-</span>
+                        <span>Copyright &copy;ADD -2024-</span>
                     </div>
                 </div>
             </footer>
