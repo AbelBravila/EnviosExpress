@@ -14,8 +14,8 @@
                             <h6 class="m-0 font-weight-bold text-primary">Empleados</h6>
                         </div>
                         <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
-                            <i class="material-icons">&#xE147;</i>
-                            <span>agregar nuevo usuario</span>
+                            <i class="fas fa-fw fa-user"></i>
+                            <span>agregar nuevo Empleado</span>
                         </a>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -88,7 +88,116 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
+<!-- addempleado -->
+<div id="addEmployeeModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form>
+				<div class="modal-header">						
+					<h4 class="modal-title">Ingresar un Empleado</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">					
+					<div class="form-group">
+						<label>Nombre</label>
+						<input type="text" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label>Telefono</label>
+						<input type="number" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label>Sucursal</label>
+						<select class="form-control" aria-label="Default select example" required>
+                            <option selected>Elige una sucursal</option>
+                            <option value="1">Uno</option>
+                            <option value="2">Dos</option>
+                            <option value="3">Tres</option>
+                        </select>
+					</div>
+					<div class="form-group">
+						<label>Estado</label>
+                        <select class="form-control" aria-label="Default select example" required>
+                            <option selected>Elige un estado</option>
+                            <option value="1">Uno</option>
+                            <option value="2">Dos</option>
+                            <option value="3">Tres</option>
+                        </select>
+					</div>					
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+					<input type="submit" class="btn btn-success" value="Agregar">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Edit Modal HTML -->
+<div id="editEmployeeModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form>
+				<div class="modal-header">						
+					<h4 class="modal-title">Editar Empleado</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+                <div class="modal-body">					
+					<div class="form-group">
+						<label>Nombre</label>
+						<input type="text" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label>Telefono</label>
+						<input type="number" class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label>Sucursal</label>
+						<select class="form-control" aria-label="Default select example" required>
+                            <option selected>Elige una sucursal</option>
+                            <option value="1">Uno</option>
+                            <option value="2">Dos</option>
+                            <option value="3">Tres</option>
+                        </select>
+					</div>
+					<div class="form-group">
+						<label>Estado</label>
+                        <select class="form-control" aria-label="Default select example" required>
+                            <option selected>Elige un estado</option>
+                            <option value="1">Uno</option>
+                            <option value="2">Dos</option>
+                            <option value="3">Tres</option>
+                        </select>
+					</div>				
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+					<input type="submit" class="btn btn-success" value="Actualizar">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- Delete Modal HTML -->
+<div id="deleteEmployeeModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form>
+				<div class="modal-header">						
+					<h4 class="modal-title">Elimimar Empleado</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">					
+					<p>¿Estas seguro de eliminar este empleado?</p>
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+					<input type="submit" class="btn btn-danger" value="Eliminar">
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
