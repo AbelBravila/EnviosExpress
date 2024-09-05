@@ -11,11 +11,11 @@
                             <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Usuarios</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Sucursales</h6>
                         </div>
                         <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal">
                             <i class="fas fa-fw fa-user"></i> 
-                            <span>agregar nuevo usuario</span>
+                            <span>agregar nueva sucursal</span>
                         </a>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -23,23 +23,22 @@
                                 <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Nombre</th>
-                                            <th>Email</th>
+                                            <th>Nombre Sucursal</th>
+                                            <th>ubicacion</th>
                                             <th>Telefono</th>
-                                            <th>Sucursal</th>
-                                            <th>Estado</th>
+
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($usuarios as $usuario)
+                                        @foreach($sucursales as $sucursal)
                                         <tr>
-                                            <td>{{ $usuario->id }}</td>
-                                            <td>{{ $usuario->name }}</td>
-                                            <td>{{ $usuario->email }}</td>
-                                            <td>{{ $usuario->telefono }}</td>
-                                            <td>{{ $usuario->sucursal_id }}</td> <!-- Ajusta si la relación es con sucursal -->
-                                            <td>{{ $usuario->Estado }}</td>
+                                            <td>{{ $sucursal->id }}</td>
+                                            <td>{{ $sucursal->nombreSucursal }}</td>
+                                            <td>{{ $sucursal->ubicacion }}</td>
+                                            <td>{{ $sucursal->telefono }}</td>
+                                            
+                                            
                                             <td> 
                                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal">
                                                     <i class="fas fa-fw fa-pen"></i>

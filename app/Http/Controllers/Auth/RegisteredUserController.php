@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
@@ -14,6 +14,11 @@ use Illuminate\View\View;
 
 class RegisteredUserController extends Controller
 {
+    public function index() {
+        $usuarios = DB::table('users')->get(); // Consulta a la base de datos
+        return view('usuarios.index', compact('usuarios',$usuarios)); // Envía la variable a la vista
+    }
+    
     /**
      * Display the registration view.
      */

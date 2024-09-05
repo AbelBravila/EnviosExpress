@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\EmpleadosController;
 use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SucursalesController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,6 +23,8 @@ Route::get('/', function () {
 Route::get('dashboard', [AdminController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('empleados', [EmpleadosController::class, 'index'])->name('empleados');
 Route::get('usuarios', [UsuariosController::class, 'index'])->name('usuarios');
+Route::get('sucursales', [SucursalesController::class, 'index'])->name('sucursales');
+
 
 
 //Lo usé para ingresar un usuario

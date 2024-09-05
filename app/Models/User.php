@@ -20,7 +20,10 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'rol'
+        'rol',
+        'Estado',
+        'telefono',
+
     ];
 
     /**
@@ -44,5 +47,9 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    public function sucursal()
+    {
+        return $this->belongsTo(Sucursal::class);
     }
 }

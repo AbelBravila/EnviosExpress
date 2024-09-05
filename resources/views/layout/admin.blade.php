@@ -81,7 +81,7 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="#">Agregar Sucursales</a>
+                        <a class="collapse-item" href="{{route('sucursales')}}">Agregar Sucursales</a>
                         <a class="collapse-item" href="#">Porcentaje de envio</a>
                     </div>
                 </div>

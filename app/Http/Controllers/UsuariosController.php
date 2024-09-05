@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,7 +12,8 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        return view('Usuarios.index');
+        $usuarios = DB::table('users')->get(); // O User::all();
+        return view('usuarios.index', compact('usuarios')); // Envía la variable a la vista
     }
 
     /**
@@ -62,4 +63,5 @@ class UsuariosController extends Controller
     {
         //
     }
+    
 }
