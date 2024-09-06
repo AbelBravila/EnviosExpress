@@ -113,6 +113,7 @@
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<form form method="POST" action="{{ route('sucursales-actualizar') }}">
+            @csrf
 				<div class="modal-header">						
 					<h4 class="modal-title">Editar usuario</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -129,8 +130,8 @@
                     <div class="form-group">
 						<label>Estado</label>
                         <select class="form-control" name="estado" required>
-                            <option value="Activo" @if($sucursal->estado == 'activo') selected @endif>ACTIVO</option>
-                            <option value="Inactivo" @if($sucursal->estado == 'inactivo') selected @endif>INACTIVO</option>
+                            <option value="activo" @if($sucursal->estado == 'activo') selected @endif>ACTIVO</option>
+                            <option value="inactivo" @if($sucursal->estado == 'inactivo') selected @endif>INACTIVO</option>
                         </select>
 					</div>			
                     <div class="form-group">
@@ -156,13 +157,14 @@
 <div id="deleteEmployeeModal" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
-			<form>
+			<form method="POST" action="{{ route('sucursales-eliminar') }}">
+            @csrf
 				<div class="modal-header">						
-					<h4 class="modal-title">Elimimar usuario</h4>
+					<h4 class="modal-title">Elimimar sucursal</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">					
-					<p>¿Estas seguro de eliminar este empleado?</p>
+					<p>¿Estas seguro de eliminar esta sucursal?</p>
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">

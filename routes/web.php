@@ -28,6 +28,7 @@ Route::get('usuarios', [UsuariosController::class, 'index'])->name('usuarios');
 Route::get('sucursales', [SucursalesController::class, 'index'])->name('sucursales');
 Route::post('/sucursales-crear',[SucursalesController::class,'create'])->name('sucursales-crear');
 Route::post('/sucursales-actualizar',[SucursalesController::class,'update'])->name('sucursales-actualizar');
+Route::post('/sucursales-eliminar',[SucursalesController::class,'delete'])->name('sucursales-eliminar');
 
 
 
