@@ -23,14 +23,18 @@ Route::get('/', function () {
 Route::get('dashboard', [AdminController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('empleados', [EmpleadosController::class, 'index'])->name('empleados');
 Route::get('usuarios', [UsuariosController::class, 'index'])->name('usuarios');
+
+
 Route::get('sucursales', [SucursalesController::class, 'index'])->name('sucursales');
+Route::post('/sucursales-crear',[SucursalesController::class,'create'])->name('sucursales-crear');
+Route::post('/sucursales-actualizar',[SucursalesController::class,'update'])->name('sucursales-actualizar');
 
 
 
 //Lo usé para ingresar un usuario
-// Route::get('/RegistarUsuario', function () {
-//     return view('auth.register');
-// });
+//Route::get('/RegistarUsuario', function () {
+   // return view('auth.register');
+ //});
 
 
 // Route::get('/admin-usuarios', function () {

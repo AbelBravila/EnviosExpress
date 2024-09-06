@@ -39,7 +39,7 @@
                                             <td>{{ $usuario->email }}</td>
                                             <td>{{ $usuario->telefono }}</td>
                                             <td>{{ $usuario->sucursal_id }}</td> <!-- Ajusta si la relación es con sucursal -->
-                                            <td>{{ $usuario->Estado }}</td>
+                                            <td>{{ $usuario->estado }}</td>
                                             <td> 
                                                 <a href="#editEmployeeModal" class="edit" data-toggle="modal">
                                                     <i class="fas fa-fw fa-pen"></i>

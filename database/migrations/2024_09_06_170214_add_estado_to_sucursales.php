@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('telefono'); // Añadir campo teléfono
+        Schema::table('sucursales', function (Blueprint $table) {
+            $table->string('estado')->default('activo');
         });
     }
 
@@ -21,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('sucursales', function (Blueprint $table) {
             //
         });
     }

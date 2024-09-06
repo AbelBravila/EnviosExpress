@@ -23,7 +23,9 @@ class SucursalesController extends Controller
                 $request->nombreSucursal,
                 $request->ubicacion,
                 $request->telefono,
+                
             ]);
+            
         } catch (\Throwable $th) {
             // Manejo de la excepción
         }
@@ -40,6 +42,7 @@ class SucursalesController extends Controller
         $request->validate([
 
             'nombreSucursal' => 'required',
+            'estado' => 'required',
             'ubicacion' => 'required',
             'telefono' => 'required|numeric',
         ]);
@@ -47,6 +50,7 @@ class SucursalesController extends Controller
 
         $sucursales->update([
             'nombreSucursal' => $request->nombreSucursal,
+            'estado' => $request->estado,
             'ubicacion' => $request->ubicacion,
             'telefono' => $request->telefono,
         ]);

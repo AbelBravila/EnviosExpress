@@ -13,6 +13,7 @@ class Sucursal extends Model
         'nombreSucursal',
         'ubicacion',
         'telefono',
-        'fechadecreacion'
+        'fechadecreacion',
+        'estado'
     ];
 }
