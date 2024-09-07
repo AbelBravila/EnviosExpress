@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nombreSucursal');
             $table->string('ubicacion');
             $table->string('telefono');
+            $table->string('estado')->default('activo');
             $table->dateTime('fechadecreacion')->nullable(); 
             $table->timestamps();
         });

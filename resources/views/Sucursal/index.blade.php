@@ -42,7 +42,7 @@
                                                         <a href="#editEmployeeModal-{{ $sucursal->id }}" class="edit" data-id="{{ $sucursal->id }}" data-toggle="modal">
                                                             <i class="fas fa-fw fa-pen"></i>
                                                         </a>
-                                                        <a href="#deleteEmployeeModal" data-id="{{ $sucursal->id }}" data-name="{{ $sucursal->nombreSucursal }}" class="delete" data-toggle="modal">
+                                                        <a href="#deleteEmployeeModal-{{ $sucursal->id }}" data-id="{{ $sucursal->id }}" data-name="{{ $sucursal->nombreSucursal }}" class="delete" data-toggle="modal">
                                                             <i class="fas fa-fw fa-trash"></i>
                                                         </a>
                                                     </td>
@@ -154,17 +154,21 @@
 @endforeach
 
 <!-- Delete Modal HTML -->
-<div id="deleteEmployeeModal" class="modal fade">
+@foreach($sucursales as $sucursal)
+<div id="deleteEmployeeModal-{{ $sucursal->id }}" class="modal fade">
 	<div class="modal-dialog">
 		<div class="modal-content">
 			<form method="POST" action="{{ route('sucursales-eliminar') }}">
-            @csrf
+				@csrf
+				@method('DELETE')
+				<input type="hidden" name="id" value="{{ $sucursal->id }}">
 				<div class="modal-header">						
-					<h4 class="modal-title">Elimimar sucursal</h4>
+					<h4 class="modal-title">Eliminar sucursal</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">					
-					<p>¿Estas seguro de eliminar esta sucursal?</p>
+					<p>¿Estás seguro de que deseas eliminar esta sucursal?</p>
+					<p><strong>{{ $sucursal->nombreSucursal }}</strong></p>
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
@@ -174,6 +178,7 @@
 		</div>
 	</div>
 </div>
+@endforeach
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

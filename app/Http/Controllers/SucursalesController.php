@@ -58,11 +58,10 @@ class SucursalesController extends Controller
         return redirect()->route('sucursales')->with('success', 'Producto actualizado correctamente.');
 
     }
-    public function delete(Request $request)
-{
-    $sucursales = Sucursal::findOrFail($request->id);
-    $sucursales->delete();
 
-    return redirect()->route('sucursales')->with('success', 'Producto eliminado correctamente.');
-}
+    public function delete(Request $request){
+        $sucursales = Sucursal::findOrFail($request->id);
+        $sucursales->delete();
+        return redirect()->route('sucursales')->with('success', 'Producto eliminado correctamente.');
+    }
 }
